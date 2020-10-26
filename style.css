@@ -1,0 +1,542 @@
+/* Огромное спасибо!
+Добавил задники и картинки в мобильной версии, постарался, чтобы адекватно отображались на адаптивке.
+
+Желтая полоска возле Hiking Guide на Хроме и Файрфоксе у меня стоит прямо напротив черточки в H. Может, особенности отрисовки в Сафари, и нужно добавить специфичные для него настройки?
+*/
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('assets/fonts/Gilroy-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Chronicle Display';
+  src: url('assets/fonts/ChronicleDisp-Roman.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+header {
+  margin: 0 auto;
+  max-width: 1760px;
+}
+
+main,
+footer {
+  margin: 0 auto;
+  max-width: 1462px;
+}
+
+.y-highlight {
+  color: rgba(251, 215, 132, 1);
+}
+
+.to-upper {
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+  color: white;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Chronicle Display';
+}
+
+p {
+  font-family: Gilroy;
+}
+
+body {
+  background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0b1d26 108.93%),
+    url('assets/img/HG.png') center -400px no-repeat, url('assets/img/MG.png') center 450px no-repeat,
+    url('assets/img/VG.png') center 1150px no-repeat, #0b1d26;
+  z-index: -2;
+  margin: 0;
+}
+
+nav {
+  align-items: center;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 58px;
+  padding: 0 2%;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+#nav--logo {
+  align-content: center;
+  font-family: 'Chronicle Display';
+  font-size: 32px;
+  letter-spacing: 0.01em;
+  line-height: 38px;
+  text-transform: capitalize;
+}
+
+#nav--menu {
+  font-family: Gilroy;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+nav li {
+  display: inline;
+  margin: 0 40px;
+}
+
+#nav--acc {
+  font-family: Gilroy;
+  font-size: 17px;
+}
+
+#main-info {
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 99px;
+}
+
+#main-info--vertical {
+  font-family: Gilroy;
+  color: white;
+  transform: rotate(90deg);
+  position: relative;
+  left: -60px;
+}
+
+#main-info--vertical > * {
+  margin-right: 15px;
+}
+
+.main-info--vertical__icon {
+  transform: rotate(-90deg);
+}
+
+#main-info--graph {
+  text-align: right;
+  padding-right: 1%;
+}
+
+#main-info--graph a {
+  text-decoration: none;
+}
+
+#main-info--graph > * {
+  display: inline-block;
+}
+
+#main-info--graph-line {
+  margin-left: 6px;
+}
+
+#main-info--graph-line p:first-child {
+  font-weight: 800;
+  color: rgba(251, 215, 132, 1);
+}
+
+.main--title {
+  font-family: 'Chronicle Display';
+  font-size: 88px;
+  font-weight: 600;
+  line-height: 100px;
+  text-transform: capitalize;
+}
+
+#scroll-down img {
+  height: 24px;
+  margin-left: 8px;
+  position: relative;
+  top: 8px;
+  width: 16px;
+}
+
+#main-info--flex {
+  align-items: center;
+  display: flex;
+  justify-content: start;
+}
+
+.main-info--y-line {
+  background-color: rgba(251, 215, 132, 1);
+  height: 2px;
+  margin-right: 10px;
+  width: 72px;
+  display: inline-block;
+}
+
+#hguide {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 6px;
+  line-height: 22px;
+}
+
+.empty-spaces {
+  height: 850px;
+  position: relative;
+}
+
+.fade-to-back {
+  position: absolute;
+  width: 100%;
+  height: 700px;
+  top: 1400px;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0b1d26 61.38%);
+}
+
+.cards--container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 200px;
+  padding: 0 2%;
+}
+
+.cards--container:nth-child(2) {
+  flex-direction: row-reverse;
+}
+
+.cards--text-wrap {
+  position: relative;
+  margin-left: 65px;
+}
+
+.cards--bfletter {
+  font-size: 220px;
+  font-weight: 700;
+  opacity: 0.1;
+  position: absolute;
+  color: #fff;
+  top: -340px;
+  left: -70px;
+}
+
+.cards--text-wrap h2 {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 77px;
+  margin-bottom: 27px;
+}
+
+.cards--text-wrap span {
+  font-family: Gilroy;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 6px;
+}
+
+.cards--text-wrap p {
+  width: 95%;
+}
+
+.cards--readmore {
+  font-family: Gilroy;
+  margin-top: 27px;
+}
+
+.y-line__card {
+  position: relative;
+  top: -5px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+}
+
+#f-brand {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+#f-mntn {
+  font-size: 32px;
+  letter-spacing: 0.01em;
+  line-height: 38px;
+  text-transform: capitalize;
+}
+
+#f--copyright {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+  margin-top: auto;
+  opacity: 0.5;
+}
+
+#f--nav {
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin-top: 0;
+}
+
+#f--nav ul:nth-child(2) {
+  margin-left: 212px;
+}
+
+#f--nav li {
+  display: block;
+  margin-top: 16px;
+}
+
+#f--nav a {
+  font-family: Gilroy;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.f--yellow {
+  color: #fbd784;
+  font-size: 24px !important;
+  font-weight: bold;
+  line-height: 32px;
+}
+
+@media screen and (max-width: 1200px) {
+  #main-info {
+    flex-direction: column;
+  }
+
+  #main-info--vertical {
+    align-self: start;
+    left: 5px;
+    margin-bottom: 50px;
+    transform: none;
+  }
+
+  .main-info--vertical__icon {
+    transform: none;
+  }
+
+  #main-info--graph {
+    display: none;
+  }
+
+  .empty-spaces {
+    height: 200px;
+  }
+
+  #cards {
+    background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, rgb(11, 29, 38) 10%);
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  .cards--container {
+    margin-bottom: 100px;
+    margin-left: 2%;
+  }
+
+  .cards--text-wrap > .cards--bfletter {
+    font-size: 110px;
+    font-weight: 700;
+    opacity: 0.1;
+    position: absolute;
+    color: #fff;
+    top: -135px;
+    left: -70px;
+  }
+
+  .cards--container img {
+    width: 300px;
+    padding: 0 2%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .main--title {
+    font-size: 60px;
+    line-height: 90px;
+  }
+
+  .cards--text-wrap h2 {
+    font-size: 44px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .cards--text-wrap h2 {
+    margin-left: 2%;
+  }
+
+  .cards--text-wrap p,
+  .cards--text-wrap span {
+    font-size: 14px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  #f--nav ul:nth-child(2) {
+    margin-left: 100px;
+  }
+
+  @media only screen and (max-width: 720px) {
+    body {
+      margin: 0 0;
+    }
+
+    #big-screen {
+      display: none;
+    }
+
+    #nav--menu {
+      line-height: 24px;
+      text-align: center;
+    }
+
+    #nav--menu li {
+      display: block;
+    }
+
+    #nav--acc {
+      text-align: center;
+    }
+
+    .main--title {
+      font-size: 40px;
+      line-height: 52px;
+      padding-left: 2%;
+    }
+
+    #main-info--vertical {
+      width: 50%;
+    }
+
+    .empty-spaces {
+      height: 100px;
+    }
+
+    #cards {
+      width: 100vw;
+    }
+
+    .cards--container {
+      justify-content: center;
+      flex-direction: column-reverse;
+      margin: 30px 0 40px 0;
+    }
+
+    .cards--container:nth-child(2) {
+      flex-direction: column-reverse;
+    }
+
+    .cards--bfletter {
+      display: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .cards--text-wrap {
+      margin: 0 auto;
+      padding: 0 2%;
+    }
+
+    .cards--text-wrap span {
+      letter-spacing: normal;
+    }
+
+    .cards--text-wrap h2 {
+      font-weight: 600;
+      font-size: 38px;
+      line-height: 40px;
+      margin-bottom: 12px;
+    }
+
+    .cards--container img {
+      display: block;
+      height: 300px;
+      margin-bottom: 20px;
+      object-fit: cover;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .cards--image__mobile-bottom {
+      object-position: bottom center;
+    }
+
+    footer {
+      flex-direction: column;
+    }
+
+    footer h2,
+    li,
+    p,
+    a,
+    .f--yellow {
+      font-size: 12px !important;
+      padding-left: 2%;
+    }
+
+    #f-brand {
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
+
+    #f--nav {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #f--nav {
+      line-height: 18px;
+    }
+
+    #f--nav ul {
+      text-align: center;
+      padding: 0;
+    }
+
+    #f--nav ul:nth-child(2) {
+      margin-left: 0;
+    }
+
+    #f--nav li {
+      margin-top: 0;
+    }
+  }
+
+  @media only screen and (max-width: 350px) {
+    nav {
+      padding: 0;
+    }
+
+    header > nav ul {
+      position: relative;
+      left: -12%;
+    }
+
+    #nav--acc {
+      position: relative;
+      left: -5%;
+    }
+
+    .cards--container img {
+      padding: 0;
+      width: 100vw;
+    }
+  }
+}
